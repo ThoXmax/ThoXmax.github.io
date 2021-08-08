@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery of fortune</title>
+</head>
+<body>
+    <div>顯示彩票號碼: <span id='ticket'></span> </div>
+    <script>
+        // Q: 顯示彩票號碼
+        let ticket = '';
+        // A - Z 字母
+        let letter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+        // 隨機產生英文字母
+        function getRandomLetter(max) {
+            let randomLetterNumber = Math.floor(Math.random() * max);
+            return letter[randomLetterNumber];
+        }
+
+        // 隨機產生四位數字
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        ticket = getRandomLetter(26) + getRandomLetter(26) + getRandomInt(9999);
+        document.querySelector('#ticket').innerHTML = ticket;
+
+
+        // Q: 隱藏姓名字元
+        let name = 'musk elon';
+        // 擷取前兩個字元
+        let namePrefix = name.slice(0, 2);
+        let nameEncryption = '';
+
+        for (let i = 0; i < (name.length -2); i++) {
+            nameEncryption += '*';
+        }
+
+        console.log(namePrefix + nameEncryption);
+
+
+        // Q: 移除黑名單array
+        const players = ['Bernard', 'Youchi', 'Yenting', 'Angela', 'Yvonne', 'Ellen', 'Walter', 'Walter', 'Tim', 'Kevin', 'Russell'];
+        const blackList = ['Walter', 'Tim'];
+        
+        for (let i = 0; i < players.length; i++) {
+            for (let j = 0; j < blackList.length; j++) {           
+                // 使用includes(), 查找players中是否有存在blackList中的名單
+                if (players.includes(blackList[j])) {
+                    // 當players名單中與blackList名單相符合
+                    if(players[i] === blackList[j]) {
+                        // 刪除blackList名單中包含的人
+                        players.splice(i, 1);
+                        // 因使用splice方法, 會直接修改原本的陣列, 所以將i的參數減1
+                        i--
+                    }
+                } 
+
+            }
+        }
+        console.log(players) // should be ["Bernard", "Youchi", "Yenting", "Angela", "Yvonne", "Ellen", "Kevin", "Russell"]
+
+
+        // Q: 移除黑名單object
+        const players2 = [
+            { name: 'Bernard', email: 'bernard@example.com', ticket: 'XL3558' },
+            { name: 'Youchi', email: 'youchi@example.com', ticket: 'AH9188' },
+            { name: 'Yenting', email: 'yenting@example.com', ticket: 'LO9903' },
+            { name: 'Angela', email: 'angela@example.com', ticket: 'HY7212' },
+            { name: 'Yvonne', email: 'yvonne@example.com', ticket: 'CH7684' },
+            { name: 'Ellen', email: 'ellen@example.com', ticket: 'BB1750' },
+            { name: 'Walter', email: 'walter@example.com', ticket: 'EI5724' },
+            { name: 'Walter', email: 'walter@example.com', ticket: 'EI5724' },
+            { name: 'Tim', email: 'tim@example.com', ticket: 'CK4592' },
+            { name: 'Kevin', email: 'kevin@example.com', ticket: 'TT1804' },
+            { name: 'Russell', email: 'russell@example.com', ticket: 'SI0305' }
+        ]
+        const blackList2 = [
+            { name: 'Tim', email: 'tim@example.com', ticket: 'CK4592' },
+            { name: 'Walter', email: 'walter@example.com', ticket: 'EI5724' }
+        ]
+
+        // 比對email, 若存在黑名單裡就刪除參加者名單
+        for (let i = 0; i < players2.length; i++) {
+            for (let j = 0; j < blackList2.length; j++) {
+                if (players2[i].email.includes(blackList2[j].email)) {
+                    if (players2[i].email === blackList2[j].email) {
+                        players2.splice(i, 1)
+
+                        i--
+                    }
+                }
+            }
+            console.log(players2[i].email)
+        }
+
+
+        // 得獎名單
+        let userName = ['Musk', 'Maria', 'Guiiter', 'panda111'];
+
+        for (let i = 0; i < userName.length; i++) {
+            let userNamePrefix = userName[i].slice(0,2);
+            let userNameNumber = (userName[i].length);
+            let userNameEncryption = '';
+            let hideUserName = '';
+
+            for (let j = 0; j < (userNameNumber -2); j++) {
+                hideUserName += '*';
+            }
+
+            userNameEncryption += userNamePrefix + hideUserName;
+            console.log(userNameEncryption);
+        }
+    </script>
+</body>
+</html>
