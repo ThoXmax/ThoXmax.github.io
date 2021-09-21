@@ -4,11 +4,247 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThoXmax</title>
+    <title>Resume</title>
+
+    <!-- add fontAwesome link -->
+    <script src="https://kit.fontawesome.com/2a1264d332.js" crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;1,400&display=swap');
+
+        html, body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0px;
+            padding: 0px;
+            color: #333333;
+            background-color: #f6f7f8;
+        }
+
+        /* Header */
+        header {
+            height: 60px;
+            color: #666666;
+            box-shadow: 0 4px 15px 0 rgba(51, 48, 48, 0.08);
+        }
+
+        nav {
+            max-width: 850px;
+            height: 100%;
+            margin: auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-title {
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            color: #666666;
+        }
+
+        /* Main */
+        main {
+            max-width: 810px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin: 20px 0 5px;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin: 0 0 6px;
+            font-weight: 500;
+        }
+        
+        section {
+            margin-bottom: 40px
+        }
+
+        p {
+            color: #666666;
+        }
+        
+        /* Personal Info */
+        .avatar {
+            text-align: center;
+        }
+
+        .avatar-img {
+            border-radius: 50%;
+            width: 25%;
+        }
+
+        .name {
+            text-align: center;
+            font-size: 35px;
+            margin: 15px 0;
+        }
+
+        .social-media {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .social-media-link {
+            color: #999999;
+            text-decoration: none;
+            margin: 0 3px;
+        }
+
+        .social-media-link:hover {
+            color: #ff6600;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 15px;
+            letter-spacing: 2px;
+            color: #ff6600;
+        }
+
+        .personal-info-section .content {
+            padding: 0 10px;
+        }
+
+        /* Skill Section */
+        .skills {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .skill {
+            width: 30%;
+        }
+
+        .skill-name {
+            border-top: 1px solid #999999;
+            padding-top: 10px;
+        }
+
+        /* Experience Section */
+        hr {
+            border: 0px;
+            height: 1px;
+            background: #cccccc;
+            margin: 20px 0;
+        }
+
+        .company, .duration {
+            color: #666666;
+            font-size: 15px;
+            margin-right: 20px;
+        }
+
+        .fa-building, .fa-calendar-alt {
+            margin-right: 5px;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <span class="nav-title">Tho X Max</span>
+            <a href="#" class="nav-link" download="Max resume">
+                <i class="fas fa-file-download"></i>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section class="personal-info-section">
+            <div class="avatar">
+                <img class="avatar-img" src="https://avatars.githubusercontent.com/u/85299566?s=400&u=0fefdb899521553fc511abeb7b3771bba25f109e&v=4" alt="avatar">
+            </div>
+            <h1 class="name">Tho x Max</h1>
+            <div class="social-media">
+                <a class="social-media-link" href="https://www.facebook.com/profile.php?id=100068683793590" target="_blank">
+                    <i class="fab fa-facebook-square fa-lg"></i>
+                </a>
+                <a class="social-media-link" href="https://www.instagram.com/thoxmax777/" target="_blank">
+                    <i class="fab fa-instagram-square fa-lg"></i>
+                </a>
+                <a class="social-media-link" href="https://www.linkedin.com/feed/" target="_blank">
+                    <i class="fab fa-linkedin fa-lg"></i>
+                </a>
+                <a class="social-media-link" href="https://twitter.com/home?lang=zh-tw" target="_blank">
+                    <i class="fab fa-twitter-square fa-lg"></i>
+                </a>
+                <a class="social-media-link" href="https://github.com/ThoXmax" target="_blank">
+                    <i class="fab fa-github-square fa-lg"></i>
+                </a>
+                <a class="social-media-link" href="https://www.slideshare.net/maxtho1" target="_blank">
+                    <i class="fab fa-slideshare fa-lg"></i>
+                </a>
+                <a class="social-media-link" href="mailto:thoXmax777@gmail.com" target="_blank">
+                    <i class="fas fa-envelope-square fa-lg"></i>
+                </a>
+            </div>
+            <div class="title">
+                website | Junior Engineer | Taiwan
+            </div>
+            <p class="content">
+                Hi, I'm Max. Coding is my passion. 
+                Whether I'm creating a website reserch, I always dedicate myself 100% to my project.
+            </p>
+        </section>
+        <section class="skill-section">
+            <h2>專業技能</h2>
+            <div class="skills">
+                <div class="skill">
+                    <h3 class="skill-name">程式設計入門</h3>
+                    <p>具備網頁設計的能力, 製作使用者介面、線框圖繪製, 
+                        熟悉HTML、CSS、JavaScript, 並對基礎的演算法有一定的掌握力。
+                    </p>
+                </div>
+                <div class="skill">
+                    <h3 class="skill-name">掌握網頁開發</h3>
+                    <p>打造前端、後端的web App產品。 從網頁切版、RWD、操作DOM事件、
+                        使用AJAX與串接API等前端能力, 到使用Node.js、MongoDB建立後端功能, 
+                        深入暸解網路應用程式運作每個環節, 並親手打造自己的產品。
+                    </p>
+                </div>
+                <div class="skill">
+                    <h3 class="skill-name">軟體工程師實力</h3>
+                    <p>前端能透過前端框架建立SPA頁面, 後端能建置完整的登入系統、
+                        SQL資料庫設計, 實作購物車與金流串接</p>
+                </div>
+            </div>
+        </section>
+        <section class="experience-section">
+            <h2 class="job-experience">工作經歷</h2>
+            <div class="experience">
+                <div class="experience-item">
+                    <h3 class="job-title">專任研究助理</h3>
+                    <span class="company"><i class="far fa-building"></i>Max</span>
+                    <span class="duration"><i class="fas fa-calendar-alt"></i>2021/05 - 迄今</span>
+                    <p>負責開發系統</p>
+                </div>
+                <hr>
+                <div class="experience-item">
+                    <h3>網頁開發工程師</h3>
+                    <span class="company"><i class="far fa-building"></i>Max</span>
+                    <span class="duration"><i class="fas fa-calendar-alt"></i>2020/10 - 2021/04</span>
+                    <p>網站系統開發</p>
+                </div>
+                <hr>
+                <div class="experience-item">
+                    <h3>資訊設備維修工程師</h3>
+                    <span class="company"><i class="far fa-building"></i>Max</span>
+                    <span class="duration"><i class="fas fa-calendar-alt"></i>2017/09 - 2020/10</span>
+                    <p>維修主機、筆電、印表機</p>
+                </div>
+            </div>
+        </section>
+    </main>
     
-    <h1>Hi my name is ThoXmax.</h1>
 
 </body>
 </html>
